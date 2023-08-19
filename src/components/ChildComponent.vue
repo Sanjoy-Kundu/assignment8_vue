@@ -5,12 +5,17 @@ defineProps(['parent'])
 const emit = defineEmits();
 
 const emitMessage = () => {
-  emit('messageEmitted', 'Message Show Form Child Component');
+  emit('messageEmitted', 'This message form Child Component');
 };
 </script>
 <template>
-	<h2>This is child component</h2>
-	<h2>Message From Parent Component : <b>{{ parent }}</b></h2>
-	<button class="py-5 bg-orange-300 mt-5" @click="emitMessage">Child Component</button>
+	<div class="shadow-xl">
+		<h2 class="text-center">This is child component</h2>
+		<button class="py-5 bg-green-300 mt-5" @click="emitMessage">SHOW MESSAGE</button>
+	</div>
 </template>
-<style></style>
+<style scoped>
+button{
+	margin-left: 25px;
+}
+</style>

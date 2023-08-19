@@ -14,16 +14,30 @@
 
 <template>
 	<div class="parent">
-	  <h1>Parent Component <b>{{ parentMessage}}</b></h1>
-	  
+	  <h1 class="text-center">Parent Component</h1>
+    <p>Child Component Message: <span>{{ emittedMessage }}</span></p> <br>
 	  <ChildComponent :message="parentMessage" @messageEmitted="handleMessageEmitted" />
-	  <p><mark>Child Component Message:</mark> {{ emittedMessage }}</p>
+	 
 	</div>
   </template>
 
 
 
   <style scoped>
+  h1{
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: c;
+  }
+  span{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 20px;
+    color: green;
+  }
+  p{
+    padding-left: 20px;
+  }
   </style>
   
 
